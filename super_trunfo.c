@@ -3,7 +3,7 @@
 
 int main() {
 
-    printf("\n\nSuper Trunfo em 'C' (Novato)\n");
+    printf("\n\nSuper Trunfo em 'C' (Aventureiro)\n");
 
     //Variaveis Carta 
     char estado1;
@@ -59,6 +59,14 @@ int main() {
     printf("Qual o PIB da cidade? ");
     scanf("%f", &pib2);
 
+    //Calculos Carta 1
+    float densidade1 = (float) populacao1 / area1;
+    float ppc1 = (float) pib1 / populacao1;
+
+    //Calculos Carta 2
+    float densidade2 = (float) populacao2 / area2;
+    float ppc2 = (float) pib2 / populacao2;
+
     printf("\n\n       >>>> Cartas Cadastradas: <<<<< \n");
 
     //Informativo Carta 1
@@ -70,6 +78,8 @@ int main() {
     printf("Area: %.2f Km² \n", area1);
     printf("PIB: %.2f reais \n", pib1);
     printf("Pontos turisticos: %i \n", turismo1);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per capita: %.2f reais \n", ppc1);
 
     //Informativo Carta 2
     printf("\n     Carta 2 \n");
@@ -80,6 +90,8 @@ int main() {
     printf("Area: %.2f Km² \n", area2);
     printf("PIB: %.2f reais \n", pib2);
     printf("Pontos turisticos: %i \n", turismo2);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per capita: %.2f reais \n", ppc2);
 
     return 0;
 }
