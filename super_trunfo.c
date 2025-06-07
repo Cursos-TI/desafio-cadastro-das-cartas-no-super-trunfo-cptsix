@@ -100,16 +100,84 @@ int main() {
     printf("Super: %.2f \n", super2);
 
     //Combate de cartas
+    int escolha;
 
-    printf("\n      Hora da Batalha     \n\n");
+    printf("\n\n\n      Hora da Batalha     \n");
+    printf("Escolha o atributo de combate: \n");
+    printf("1 - Populacao\n");
+    printf("2 - Area\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turisticos\n");
+    printf("5 - Densidade Demografica\n\n");
+    scanf("%i", &escolha);
+    
+    switch (escolha) {
 
-    printf("Atributo escolhido: Populacao\n");
-    printf(" %d\n", populacao1);
-    printf(" %d\n", populacao2);
-    if (populacao1 > populacao2) {
-        printf("Resultado: %s venceu!\n",cidade1);
-    } else{
-        printf("Resultado: %s venceu!\n",cidade2);
+        case 1:
+            printf("Atributo escolhido: Populacao\n");
+            printf(" %s: %d\n", cidade1, populacao1);
+            printf(" %s: %d\n", cidade2, populacao2);
+            if (populacao1 > populacao2) {
+            printf("Resultado: %s venceu!\n",cidade1);
+            } else if (populacao1 < populacao2) {
+            printf("Resultado: %s venceu!\n",cidade2);
+            } else {
+            printf("Resultado: Empate");
+            }
+            break;
+        
+        case 2:
+            printf("Atributo escolhido: Area\n");
+            printf(" %s: %f\n", cidade1, area1);
+            printf(" %s: %f\n", cidade2, area2);
+            if (area1 > area2) {
+            printf("Resultado: %s venceu!\n",cidade1);
+            } else if (area1 < area2) {
+            printf("Resultado: %s venceu!\n",cidade2);
+            } else {
+            printf("Resultado: Empate");
+            }
+            break;
+        
+        case 3:
+            printf("Atributo escolhido: PIB\n");
+            printf(" %s: %f\n", cidade1, pib1);
+            printf(" %s: %f\n", cidade2, pib2);
+            if (pib1 > pib2) {
+            printf("Resultado: %s venceu!\n",cidade1);
+            } else if (pib1 < pib2) {
+            printf("Resultado: %s venceu!\n",cidade2);
+            } else {
+            printf("Resultado: Empate");
+            }
+            break;
+        
+        case 4:
+            printf("Atributo escolhido: Pontos Turisticos\n");
+            printf(" %s: %i\n", cidade1, turismo1);
+            printf(" %s: %i\n", cidade2, turismo2);
+            if (turismo1 > turismo2) {
+            printf("Resultado: %s venceu!\n",cidade1);
+            } else if (turismo1 < turismo2) {
+            printf("Resultado: %s venceu!\n",cidade2);
+            } else {
+            printf("Resultado: Empate");
+            }
+            break;
+        
+        case 5:
+            printf("Atributo escolhido: Densidade Demografica\n");
+            printf(" %s: %f\n", cidade1, densidade1);
+            printf(" %s: %f\n", cidade2, densidade2);
+            if (densidade1 < densidade2) {
+            printf("Resultado: %s venceu!\n",cidade1);
+            } else if (densidade1 > densidade2) {
+            printf("Resultado: %s venceu!\n",cidade2);
+            } else {
+            printf("Resultado: Empate");
+            }
+            break;
+        
     }
 
 return 0;
