@@ -3,13 +3,13 @@
 
 int main() {
 
-    printf("\n\nSuper Trunfo em 'C' (Mestre)\n");
+    printf("\n\nSuper Trunfo em 'C'\n");
 
     //Variaveis Carta 
     char estado1;
     char codigo1[4];
     char cidade1[30];
-    unsigned long int populacao1;
+    int populacao1;
     int turismo1;
     float area1, pib1;
     
@@ -17,7 +17,7 @@ int main() {
     char estado2;
     char codigo2[4];
     char cidade2[30];
-    unsigned long int populacao2;
+    int populacao2;
     int turismo2;
     float area2, pib2;
 
@@ -33,7 +33,7 @@ int main() {
     fgets(cidade1,sizeof(cidade1),stdin);
     cidade1[strcspn(cidade1, "\n")] = 0;
     printf("Quantos habitantes tem? ");
-    scanf("%u", &populacao1);
+    scanf("%d", &populacao1);
     printf("Quantos pontos turisticos tem? ");
     scanf("%i", &turismo1);
     printf("Qual a area(km²)? ");
@@ -53,7 +53,7 @@ int main() {
     fgets(cidade2, sizeof(cidade2) ,stdin);
     cidade2[strcspn(cidade2, "\n")] = 0;
     printf("Quantos habitantes tem? ");
-    scanf("%u", &populacao2);
+    scanf("%d", &populacao2);
     printf("Quantos pontos turisticos tem? ");
     scanf("%i", &turismo2);
     printf("Qual a area(km²)? ");
@@ -78,7 +78,7 @@ int main() {
     printf("Estado: %c\n", estado1);
     printf("Codigo: %s\n", codigo1);
     printf("Cidade: %s\n", cidade1);
-    printf("Populacao: %u Habitantes \n", populacao1);
+    printf("Populacao: %d Habitantes \n", populacao1);
     printf("Area: %.2f Km² \n", area1);
     printf("PIB: %.2f reais \n", pib1);
     printf("Pontos turisticos: %i \n", turismo1);
@@ -91,7 +91,7 @@ int main() {
     printf("Estado: %c \n", estado2);
     printf("Codigo: %s\n", codigo2);
     printf("Cidade: %s\n", cidade2);
-    printf("Populacao: %u Habitantes \n", populacao2);
+    printf("Populacao: %d Habitantes \n", populacao2);
     printf("Area: %.2f Km² \n", area2);
     printf("PIB: %.2f reais \n", pib2);
     printf("Pontos turisticos: %i \n", turismo2);
@@ -103,13 +103,14 @@ int main() {
 
     printf("\n      Hora da Batalha     \n\n");
 
-    printf("A populacao de %s e maior que a de %s? %i \n", cidade1, cidade2, populacao1 > populacao2);
-    printf("A Area de %s e maior que a de %s? %i \n", cidade1, cidade2, area1 > area2);
-    printf("O PIB de %s e maior que a de %s? %i \n", cidade1, cidade2, pib1 > pib2);
-    printf("A quantidade de Pontos Turisticos de %s e maior que a de %s? %i \n", cidade1, cidade2, turismo1 > turismo2);
-    printf("O Pib per Capita de %s e maior que a de %s? %i \n", cidade1, cidade2, ppc1 > ppc2);
-    printf("A Densidade de %s e menor que a de %s? %i \n", cidade1, cidade2, densidade1 < densidade2);
-    printf("A Super de %s e maior que a de %s? %i \n", cidade1, cidade2, super1 > super2);
-    
-    return 0;
+    printf("Atributo escolhido: Populacao\n");
+    printf(" %d\n", populacao1);
+    printf(" %d\n", populacao2);
+    if (populacao1 > populacao2) {
+        printf("Resultado: %s venceu!\n",cidade1);
+    } else{
+        printf("Resultado: %s venceu!\n",cidade2);
+    }
+
+return 0;
 }
